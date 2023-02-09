@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>ex6.html</h2>
+	
+	<ul>
+		<li th:each="dto : ${list}">
+			<a th:href="@{/home/exview(sno=${dto.sno})}">[[${dto}]]</a>
+		</li>
+	</ul>
+</body>
+</html>

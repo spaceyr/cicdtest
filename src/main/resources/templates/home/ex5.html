@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<th:block th:each="dto : ${list}">
+	<div>
+		사용자번호 : <span th:text="${dto.sno}"></span>
+		사용자이름 : <span th:text="${dto.sno%3 == 0} ? ${dto.first} : ${dto.last}"></span>
+	</div>
+	<hr/>
+</th:block>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1 th:text="${result}"></h1>
+	<h1 th:text="${dto}"></h1>
+	
+	<table>
+		<tr>
+			<th>sno</th>
+			<th>first</th>
+			<th>last</th>
+			<th>regtime</th>
+		</tr>
+		<tr>
+			<td th:text="${dto.sno}"></td>
+			<td th:text="${dto.first}"></td>
+			<td th:text="${dto.last}"></td>
+			<td th:text="${dto.regtime}"></td>
+		</tr>
+	</table>
+	<!-- 자바스크립트도 바로 값 전달 가능 -->
+    <script th:inline="javascript">
+        var msg=[[${result}]]
+        var dto = [[${dto}]]
+        console.log(msg);
+    </script>
+</body>
+</html>
